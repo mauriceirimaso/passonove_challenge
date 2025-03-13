@@ -8,7 +8,7 @@ import cart from './assets/icons/cart-3.png'
 
 
 function App() {
-  const n='>'
+  
 
   const [cartNumber, setCartNumber] = useState<number>(0); 
 

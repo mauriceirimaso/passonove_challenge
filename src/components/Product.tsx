@@ -26,15 +26,13 @@ const Product: React.FC<ChildProps> = ({ updateCart }) => {
   const c='>'
 
   const [number, setNumber] = useState(0);
-  const [cartitem, setcartitem] = useState(0);
+  
 
   const increment = () => {
     setNumber(prevNumber => (prevNumber < 6 ? prevNumber + 1 : prevNumber));
   };
 
-  const incrementcart = () => {
-    setcartitem(prevNumber => (prevNumber < 6 ? prevNumber + 1 : prevNumber));
-  };
+ 
 
   const decrement = () => {
     setNumber(prevNumber => (prevNumber > 0 ? prevNumber - 1 : prevNumber));
