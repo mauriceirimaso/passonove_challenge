@@ -1,17 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './product.css';
 import { Star } from 'lucide-react';
 import sanitizer from '../assets/newphotoes/sanitizer.png';
 import sanitizer2 from '../assets/newphotoes/sanitizer2.png';
 import sanitizer3 from '../assets/newphotoes/sanitizer3.png';
 import star from '../assets/icons/star.png';
-import cart from '../assets/icons/cart.png';
-import { ShoppingCart } from 'lucide-react';
+import face from '../assets/newphotoes/face.png';
+import product2 from '../assets/newphotoes/product2.png';
+import product3 from '../assets/newphotoes/product3.png';
+import product4 from '../assets/newphotoes/product4.png';
+
+import Newproduct from './Newproduct';
 
 
-const Product = () => {
+interface ChildProps {
+  updateCart: (newCartNumber: any) => void;  // Function passed as prop to update cart
+}
+
+const Product: React.FC<ChildProps> = ({ updateCart }) => {
+  const handleAddToCart = () => {
+    updateCart((prevNumber: number) => prevNumber + 1);  // Increment cart number by 1
+  };
+
   const b='<';
   const c='>'
+
+  const [number, setNumber] = useState(0);
+  const [cartitem, setcartitem] = useState(0);
+
+  const increment = () => {
+    setNumber(prevNumber => (prevNumber < 6 ? prevNumber + 1 : prevNumber));
+  };
+
+  const incrementcart = () => {
+    setcartitem(prevNumber => (prevNumber < 6 ? prevNumber + 1 : prevNumber));
+  };
+
+  const decrement = () => {
+    setNumber(prevNumber => (prevNumber > 0 ? prevNumber - 1 : prevNumber));
+  };
+
+  
+  const formattedNumber = number.toString().padStart(2, '0');
   return (
     <>
       <div className='product-container1'>
@@ -24,7 +54,7 @@ const Product = () => {
              <img src={sanitizer} className='samsung'/>
           </div>
         <div className='recent-images'>
-           <div className='div-1'>
+           <div className='div-active'>
                   <img src={sanitizer} className='samsung1'/>
            </div>
            <div className='div-1'>
@@ -54,10 +84,10 @@ const Product = () => {
               <p className='rating-p'>(58 reviews)</p>
         </div>
 
-        <div className='product-name-div'>
+        <div className='product-name-div-3'>
              <p className='hand'>Hand sanitizer</p>
         </div>
-        <div className='price-div'>
+        <div className='price-div-3'>
              <p className='real-price'>$49.9</p>
              <p className='through-price'>$65.55</p>
         </div>
@@ -65,19 +95,19 @@ const Product = () => {
 
 
         <div className='cart-div'>
-               <button className='negative-div'>
+               <button onClick={decrement} className='negative-div'>
                    <p className='minimize'>-</p>
                </button>
                <div className='negative-div'>
-                   <p className='minimize'>00</p>
+                   <p className='minimize'>{formattedNumber}</p>
                </div>
-               <button className='negative-div'>
+               <button onClick={increment} className='negative-div'>
                     <p className='minimize'>+</p>
                </button>
-               <a className='real-cart'>
+               <button onClick={handleAddToCart} className='real-cart'>
                     
                      <p className='onto'>Add to cart</p>
-               </a>
+               </button>
         </div>
         <div className='description-div'>
                <button className='description-button'>
@@ -87,14 +117,54 @@ const Product = () => {
                     <p className='decsription-p-2'>reviews</p>
                </button>
         </div>
+        <div className='description-body'>
+            <p className='descript-p'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus quis repudiandae sed esse non veritatis eligendi cumque. Numquam blanditiis, libero perspiciatis optio laudantium nesciunt debitis, quibusdam rem dolores fuga quis!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias a mollitia expedita voluptate itaque quaerat eos alias, repellendus repellat iste, soluta enim ut perferendis. Aspernatur nostrum iste quos commodi.
+
+            </p>
+        </div>
+
+        <div className='related-div'>
+            <p className='related-p'>Related products</p>
+        </div>
+
+       <div className='related-view'>
+       <Newproduct
+        name='Digital facemask'
+        image={face}
+        price={49.9}
+        oldPrice={60.98}
+        rating={3}
+      />
+      <Newproduct
+        name='thermemoter gun'
+        image={product2}
+        price={49.9}
+        oldPrice={60.98}
+        rating={3}
+      />
+      <Newproduct
+        name='cosmetic  containers'
+        image={product3}
+        price={49.9}
+        oldPrice={60.98}
+        rating={3}
+      />
+       <Newproduct
+        name='cosmetic conatiners'
+        image={product4}
+        price={49.9}
+        oldPrice={60.98}
+        rating={3}
+      />
+         
+       </div>
 
 
 
 
 
-
-
-
+{/* 
         <div className='lower-heading'>
             <p className='lower-p'>Galaxy s22 ultra </p>
         </div>
@@ -105,7 +175,7 @@ const Product = () => {
         <div className='lower-heading-4'>
             <p className='lower-2'>save</p>
             <p className='lower-2'>$3.233</p>
-        </div>
+        </div> */}
       </div>
     </>
   )
