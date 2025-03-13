@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 import Product from './components/Product';
 import './App.css'
-import { Menu } from 'lucide-react';
+
 import view1 from './assets/newphotoes/view1.png';
 import night from './assets/newphotoes/night.png';
 import cart from './assets/icons/cart-3.png'

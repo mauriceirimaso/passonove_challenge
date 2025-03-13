@@ -11,7 +11,7 @@ interface NewproductProps {
   rating: number;
 }
 
-const Newproduct: React.FC<NewproductProps> = ({ name, image, price, oldPrice, rating }) => {
+const Newproduct: React.FC<NewproductProps> = ({ name, image, price, oldPrice }) => {
   return (
     <div className='newproduct-container'>
             <div className='photo-view'>
@@ -24,7 +24,7 @@ const Newproduct: React.FC<NewproductProps> = ({ name, image, price, oldPrice, r
                 
             </div>
             <div className='product-name-div'>
-                 <p className='face1'>{name}</p>   {/* <p className='face1'>Digital facemask</p> */}
+                 <p className='face1'>{name}</p>  
             </div>
             <div className='price-div'>
                  <p className='real-price-3'>${price}</p>

@@ -14,12 +14,12 @@ import Newproduct from './Newproduct';
 
 
 interface ChildProps {
-  updateCart: (newCartNumber: any) => void;  // Function passed as prop to update cart
+  updateCart: (newCartNumber: any) => void; 
 }
 
 const Product: React.FC<ChildProps> = ({ updateCart }) => {
   const handleAddToCart = () => {
-    updateCart((prevNumber: number) => prevNumber + 1);  // Increment cart number by 1
+    updateCart((prevNumber: number) => prevNumber + 1);  
   };
 
   const b='<';
