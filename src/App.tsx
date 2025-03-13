@@ -28,10 +28,12 @@ function App() {
             <div className='lower-view'> 
                 <img src={view1} alt="view1" className="view1"/>
             </div>
+            
             <div className='product-heading'>
+             
                <div className='heading-1'>
                     <p className='normal-p'>Grab the best deal on</p>
-                    <p className='second-p'>Smartphones</p>
+                    <p className='second-p-2'>Smartphones</p>
                </div>
                <button className='view-all'>
                     View all{n}
