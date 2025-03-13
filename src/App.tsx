@@ -9,7 +9,7 @@ function App() {
   const n='>'
   return (
     <>
-        <div className="grand-container">
+     <div className="grand-container">
       <div className='header-div'>  
                <button
                    className="upper-button-active">
@@ -30,20 +30,15 @@ function App() {
             </div>
             
             <div className='product-heading'>
-             
-               <div className='heading-1'>
-                    <p className='normal-p'>Grab the best deal on</p>
-                    <p className='second-p-2'>Smartphones</p>
-               </div>
-               <button className='view-all'>
-                    View all{n}
-               </button>
+               <p className='new-para'>Product Details</p>
             </div>
             <div className='product-view-2'>
                <Product/>
-                <Product/>
-                <Product/>
+                
             </div>
+
+           
+             
 
      
         </div>
