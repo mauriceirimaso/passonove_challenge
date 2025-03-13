@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './product.css';
+import './Product.css';
 import { Star } from 'lucide-react';
 import sanitizer from '../assets/newphotoes/sanitizer.png';
 import sanitizer2 from '../assets/newphotoes/sanitizer2.png';
