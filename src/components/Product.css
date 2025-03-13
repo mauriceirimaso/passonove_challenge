@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.product-container
+{
+    @apply  h-full border-2 border-[rgb(255,38,0)];
+    
+    width:100%;
+}
+.samsung
+{
+    width: 100%;
+    max-height: 100%;
+}
+.product-container1
+{
+  @apply min-w-[10rem] flex flex-col h-full gap-2 border-2 border-[#2600ff];
+}
+.upper-product1
+{
+    height:80%;
+    width:100%;
+    border: 2px solid rgb(233, 31, 12);
+}
+.lower-heading
+{
+    height:10%;
+    width:100%;
+    border: 2px solid rgb(233, 31, 12);
+}
