@@ -4,7 +4,7 @@ import './App.css'
 
 import view1 from './assets/newphotoes/view1.png';
 import night from './assets/newphotoes/night.png';
-import day from './assets/icons/day.png';
+
 import { ShoppingCart } from 'lucide-react';
 import cart from './assets/icons/cart-3.png';
 import { Sun } from 'lucide-react';

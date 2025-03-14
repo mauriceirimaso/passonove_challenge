@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import './Product.css';
 import { Star } from 'lucide-react';
 import sanitizer from '../assets/newphotoes/sanitizer.png';
@@ -25,8 +25,8 @@ const Product: React.FC<ChildProps> = ({ updateCart,islight1 }) => {
   };
 
 
-  const [islight, setislight] = useState(islight1);
-
+  const [islight] = useState(islight1);
+  
 
 
   const b='<';
