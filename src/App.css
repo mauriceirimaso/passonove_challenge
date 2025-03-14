@@ -3,9 +3,23 @@
 @tailwind utilities;
 
 
+.grand-grand
+{
+  @apply flex w-full h-full   
+}
+.dark-grand-grand
+{
+  @apply flex w-full h-full bg-[rgb(46,44,44)];
 
+}
 .grand-container {
-  @apply h-full overflow-x-auto  ;
+  @apply h-full w-full overflow-x-auto  ;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.dark-grand-container {
+  @apply h-full overflow-x-auto bg-[rgb(46,44,44)]  ;
   width: 95%;
   margin-left: 2.5%;
 }
@@ -25,9 +39,15 @@
   @apply w-[30%]  bg-[rgb(20,20,183)] rounded-[7px] text-[rgb(203,193,193)];
   height: 80%;
 }
+.dark-upper-button
+{
+  
+  @apply w-[30%]   bg-[rgb(46,44,44)] rounded-[7px] text-[rgb(220,218,218)];
+  height: 80%;
+}
 .upper-button 
 {
-  @apply w-[30%]  bg-[rgb(234,234,237)] rounded-[7px] text-[rgb(12,12,12)];
+  @apply w-[30%]   bg-[rgb(234,234,237)] rounded-[7px] text-[rgb(12,12,12)];
   height: 80%;
 }
 .lower-view
@@ -92,6 +112,10 @@
 {
   @apply text-[19px] font-extrabold;
 }
+.dark-new-para
+{
+  @apply text-[19px] text-white font-extrabold;
+}
 .cart-theme {
   @apply w-full h-[7%] mt-2  border-red-500 flex flex-row-reverse; 
 }
@@ -104,8 +128,8 @@
   width:60%;
   height: 60%;
 }
-.cart-new-7 {
-  @apply w-[15%] h-full flex justify-center items-center  border-fuchsia-500;
+.cart-new-9 {
+  @apply w-[15%] h-full flex justify-center items-center   border-fuchsia-500;
 }
 
 .items {

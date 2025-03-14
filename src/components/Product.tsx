@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Product.css';
 import { Star } from 'lucide-react';
 import sanitizer from '../assets/newphotoes/sanitizer.png';
+import bsanitizer from '../assets/newphotoes/bsanitizer.png';
 import sanitizer2 from '../assets/newphotoes/sanitizer2.png';
 import sanitizer3 from '../assets/newphotoes/sanitizer3.png';
 import star from '../assets/icons/star.png';
@@ -15,12 +16,18 @@ import Newproduct from './Newproduct';
 
 interface ChildProps {
   updateCart: (newCartNumber: any) => void; 
+  islight1: boolean;
 }
 
-const Product: React.FC<ChildProps> = ({ updateCart }) => {
+const Product: React.FC<ChildProps> = ({ updateCart,islight1 }) => {
   const handleAddToCart = () => {
     updateCart((prevNumber: number) => prevNumber + 1);  
   };
+
+
+  const [islight, setislight] = useState(islight1);
+
+
 
   const b='<';
   const c='>'
@@ -49,7 +56,10 @@ const Product: React.FC<ChildProps> = ({ updateCart }) => {
                    <p className='off-p'>56%-OFF</p>
                 </div>
           </div>
+               {islight? 
              <img src={sanitizer} className='samsung'/>
+            :
+            <img src={bsanitizer} className='samsung'/>}
           </div>
         <div className='recent-images'>
            <div className='div-active'>
